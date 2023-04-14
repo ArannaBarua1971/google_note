@@ -1,0 +1,88 @@
+/* common css part */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,
+p
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* common css part */
+
+
+.add_note_btn .btn{
+    position: relative;
+}
+.add_note_btn .btn p{
+    display: inline-block;
+}
+.add_note_btn .btn i{
+    color: white;
+    margin-right: 15px;
+}
+.add_note_btn .btn::before{
+    content: '';
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #ffc107;;
+    z-index: -1;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+.add_note_btn .btn:hover::before  {
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+}
+.add_note_btn .btn:hover{
+    color: white;
+}
+
+.note_section .note{
+    width: 300px;
+    height: 200px;
+    color: white;
+    padding: 5px;
+    margin: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.note_section .note textarea,.note_section .note .main{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: black;
+    overflow: hidden;
+}
+.note_section .note .operation{
+    display: flex;
+    justify-content: flex-end;
+}
+.note_section .note .operation .btn{
+    margin:1px;
+    border-radius: 50%;
+}
+.hidden{
+    display: none;
+}
