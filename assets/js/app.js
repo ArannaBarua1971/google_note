@@ -62,8 +62,11 @@ const Notes=(text)=>{
     })
 }
 
-const notes=JSON.parse(localStorage.getItem('notes'));
+try{
+    const notes=JSON.parse(localStorage.getItem('notes'));
+    notes.forEach((ele)=> Notes(ele))
+}
+catch(ex){
 
-notes.forEach((ele)=> Notes(ele))
-
+}
 add_note.addEventListener('click',Notes);
